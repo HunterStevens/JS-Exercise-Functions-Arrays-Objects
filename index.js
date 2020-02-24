@@ -185,8 +185,11 @@ const index = inventory.length-1;
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
+function getCarInfoById(/* code here */inventory, ID) {
   /* code here */
+let index = ID - 1;
+
+  return 'This is a ' + inventory[index].car_make + ' ' + inventory[index].car_model;
 }
 
 /**
