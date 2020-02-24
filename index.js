@@ -39,10 +39,16 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(/* code here */age, fullName, eMailAdd) {
   /* code here */
+  let newPerson = {
+    id: age,
+    name: fullName,
+    email: eMailAdd
+  }
+  return newPerson;
 }
-
+console.log(makePersonObject (24, 'Blackwell', 'Blackwell@yahoo.com'));
 /**
  * ### Challenge `getName`
  * 
@@ -56,10 +62,16 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
-}
+function getName(/* code here */ age, fullName, eMailAdd) {
+  let newPerson = {
+    id: age,
+    name: fullName,
+    email: eMailAdd
+  }
 
+  /* code here */ return 'Hello, my name is ' + newPerson.name;
+}
+console.log(getName(20, 'Luke', 'Email@email.com'));
 /**
  * ### Challenge `makeSmartPerson`
  * 
