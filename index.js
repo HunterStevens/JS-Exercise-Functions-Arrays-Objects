@@ -48,7 +48,6 @@ function makePersonObject(/* code here */age, fullName, eMailAdd) {
   }
   return newPerson;
 }
-console.log(makePersonObject (24, 'Blackwell', 'Blackwell@yahoo.com'));
 /**
  * ### Challenge `getName`
  * 
@@ -225,8 +224,11 @@ function sortCarInventory(/* code here */inventory) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
+function getModelYears(/* code here */inventory) {
   /* code here */
+  let Years.push(inventory.car_year);
+
+  return Years;
 }
 
 /**
