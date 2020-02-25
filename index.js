@@ -1,3 +1,5 @@
+const inventory = require("./data/inventory.js");
+
 // ⭐️ Example Challenge start ⭐️
 
 /**
@@ -226,9 +228,11 @@ function sortCarInventory(/* code here */inventory) {
 */
 function getModelYears(/* code here */inventory) {
   /* code here */
-  let Years.push(inventory.car_year);
-
-  return Years;
+   let arrYears = [];
+   for(let i = 0; i < inventory.length; i++){
+     arrYears.push(inventory[i].car_year);
+   }
+  return arrYears;
 }
 
 /**
@@ -243,8 +247,15 @@ function getModelYears(/* code here */inventory) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
+function getOlderCars(/* code here */ inventory, index) {
   /* code here */
+  let newArr =[];
+  for(let i = 0; i < inventory.length; i++){
+    if(inventory[i].car_year <= index){
+      newArr.push(inventory[i]);
+    }
+  }
+  return newArr;
 }
 
 /**
@@ -258,8 +269,15 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
+function getGermanCars(/* code here */ inventory) {
   /* code here */
+  let arrGerman = [];
+  for(let i = 0; i<inventory.length; i++){
+    if(inventory[i].car_make === "Audi" || inventory[i].car_make === "Mercedes-Benz" || inventory[i].car_make === "Volkswagen" || inventory[i].car_make === "BMW"){
+      arrGerman.push(inventory[i]);
+    }
+  }
+  return arrGerman;
 }
 
 /**
@@ -280,9 +298,9 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (num1, num2) => { num1 + num2 }; // code here!
+const addFive = (num) => { num + 5 }; // code here!
+const argTimesTwo = (num) => { num * 2}; // code here!
 
 /**
  * ### Challenge `carMaker`
